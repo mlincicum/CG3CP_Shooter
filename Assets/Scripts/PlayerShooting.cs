@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -8,12 +9,12 @@ public class PlayerShooting : MonoBehaviour
     private GameObject projectile;
     [SerializeField]
     private Transform shootPoint;
-    
-    void Update()
+
+    public void OnFire(InputValue value)
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (value.isPressed)
         {
             Instantiate(projectile, shootPoint.position, shootPoint.rotation);
-        }   
+        }
     }
 }
