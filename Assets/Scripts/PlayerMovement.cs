@@ -9,11 +9,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed, rotationSpeed;
     private Vector2 movementValue;
     private float lookValue;
+    
+    private Rigidbody rb;
 
     void Awake()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        
+        rb = GetComponent<Rigidbody>();
     }
 
     private void OnMove(InputValue value)
@@ -29,13 +33,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Apply movement
-        transform.Translate(
+        rb.AddRelativeForce(
             movementValue.x * Time.deltaTime,
             0,
             movementValue.y * Time.deltaTime
         );
         
         // Apply rotation
-        transform.Rotate(0, lookValue * Time.deltaTime, 0);
+        rb.AddRelativeTorque(0, lookValue * Time.deltaTime, 0);
     }
 }
