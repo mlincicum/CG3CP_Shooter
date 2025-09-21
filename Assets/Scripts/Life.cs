@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Life : MonoBehaviour
 {
-    [SerializeField] private float amount;
+    public float amount;
+    public UnityEvent onDeath;
 
-    public void damage(float damage)
+    public void Damage(float damage)
     {
         amount -= damage;
-        if (amount <= 0) Destroy(gameObject);
+        if (amount <= 0)
+        {
+            onDeath.Invoke();
+            Destroy(gameObject);
+        }
     }
 }

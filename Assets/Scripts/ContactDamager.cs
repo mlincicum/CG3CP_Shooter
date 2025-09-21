@@ -14,7 +14,7 @@ public class ContactDamager : MonoBehaviour
 
         if (life != null)
         {
-            life.damage(damage);
+            life.Damage(damage);
         }
     }
 }
