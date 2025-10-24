@@ -127,10 +127,10 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 15
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 30
   gaussianMaxRadius:
     m_OverrideState: 1
     m_Value: 1
@@ -194,14 +194,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   shadows:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_OverrideState: 1
+    m_Value: {x: 0.7815951, y: 0.8154095, z: 1, w: 0.06178295}
   midtones:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0.927667, z: 0.74180293, w: 0.07943511}
   highlights:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 0.8879957, z: 0.99820036, w: -0.14739642}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
