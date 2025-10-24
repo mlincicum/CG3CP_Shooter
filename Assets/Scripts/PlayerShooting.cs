@@ -10,11 +10,14 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField]
     private Transform shootPoint;
 
+    [SerializeField] private ParticleSystem muzzleFlash;
+
     public void OnFire(InputValue value)
     {
         if (value.isPressed)
         {
             Instantiate(projectile, shootPoint.position, shootPoint.rotation);
+            muzzleFlash.Play();
         }
     }
 }

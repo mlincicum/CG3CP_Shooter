@@ -22,6 +22,7 @@ public class EnemyFSM : MonoBehaviour
     private float lastShootTime;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireRate;
+    [SerializeField] ParticleSystem muzzleFlash;
     
     void Awake()
     {
@@ -126,6 +127,7 @@ public class EnemyFSM : MonoBehaviour
         {
             lastShootTime = Time.time;
             Instantiate(bulletPrefab, transform.position, transform.rotation);
+            muzzleFlash.Play();
         }
     }
     
