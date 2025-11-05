@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour
     private GameObject projectile;
     [SerializeField]
     private Transform shootPoint;
+    [SerializeField] private AudioSource shootSound;
 
     [SerializeField] private ParticleSystem muzzleFlash;
 
@@ -18,6 +19,7 @@ public class PlayerShooting : MonoBehaviour
         {
             Instantiate(projectile, shootPoint.position, shootPoint.rotation);
             muzzleFlash.Play();
+            shootSound.Play();
         }
     }
 }
