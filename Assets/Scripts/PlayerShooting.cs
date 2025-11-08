@@ -13,10 +13,14 @@ public class PlayerShooting : MonoBehaviour
 
     [SerializeField] private ParticleSystem muzzleFlash;
 
+    public int bulletsAmount;
+
     public void OnFire(InputValue value)
     {
-        if (value.isPressed)
+        if (value.isPressed && bulletsAmount > 0 && Time.timeScale > 0)
         {
+            bulletsAmount--;
+
             Instantiate(projectile, shootPoint.position, shootPoint.rotation);
             muzzleFlash.Play();
             shootSound.Play();
