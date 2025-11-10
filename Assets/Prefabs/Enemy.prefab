@@ -90,6 +90,8 @@ GameObject:
   - component: {fileID: 3523192874285830500}
   - component: {fileID: 2615627390635968477}
   - component: {fileID: 6223714036759893693}
+  - component: {fileID: -3303595350453077495}
+  - component: {fileID: 4536290274838461978}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -242,6 +244,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 5270397192889654895, guid: f582938869546e049b0aa6444a3c0784,
     type: 3}
+--- !u!95 &-3303595350453077495
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172138654705342786}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 90dac3abf1179b342b84e3c83039fa77, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3fddf5519a321ec4bb1315b9ec0a1a9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4536290274838461978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172138654705342786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd8eb40e933ab04187457a85fd40617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2651149957554345902
 PrefabInstance:
   m_ObjectHideFlags: 0
